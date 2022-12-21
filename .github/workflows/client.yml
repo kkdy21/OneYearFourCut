@@ -16,13 +16,14 @@ jobs:
         
       - name: Generate Environment Variables File for Production
         run: |
-          echo "REACT_APP_SERVER_URL=$REACT_APP_SERVER_URL" >> ./client.env
-          echo "REACT_APP_KAKAO_AUTH_URL=$REACT_APP_KAKAO_AUTH_URL" >> ./client.env
-          echo "REACT_APP_CRYPTION_SALT=$REACT_APP_CRYPTION_SALT" >> ./client.env
+          echo "REACT_APP_SERVER_URL=$REACT_APP_SERVER_URL" >> .env
+          echo "REACT_APP_KAKAO_AUTH_URL=$REACT_APP_KAKAO_AUTH_URL" >> .env
+          echo "REACT_APP_CRYPTION_SALT=$REACT_APP_CRYPTION_SALT" >> .env
         env: 
           REACT_APP_SERVER_URL: ${{ secrets.REACT_APP_SERVER_URL }}
           REACT_APP_KAKAO_AUTH_URL: ${{ secrets.REACT_APP_KAKAO_AUTH_URL }}
           REACT_APP_CRYPTION_SALT: ${{ secrets.REACT_APP_CRYPTION_SALT }}
+        working-directory: "./client"
 
       - name: build
         run: npm run build
