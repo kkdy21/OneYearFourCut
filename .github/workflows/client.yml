@@ -41,8 +41,5 @@ jobs:
         run: |
           aws s3 sync \
             --region ap-northeast-2 \
-            _site s3://oneyearfourcut-front \
+            build s3://oneyearfourcut-front \
             --delete
-        working-directory: "./client/build"
-    
-
