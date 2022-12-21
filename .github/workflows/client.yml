@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout source code.
+        uses: actions/checkout@main
       - name: pwd && ls -al
         run: ls -al
       - name: Install dependencies
