@@ -11,6 +11,7 @@ jobs:
         run: npm install
         working-directory: ./client
       - name: Generate Environment Variables File for Production
+        run: echo Setting env
         working-directory: ./client
         env:
           REACT_APP_SERVER_URL: ${{ secrets.REACT_APP_SERVER_URL }}
