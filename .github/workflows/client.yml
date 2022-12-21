@@ -41,5 +41,5 @@ jobs:
         run: |
           aws s3 sync \
             --region ap-northeast-2 \
-            build s3://oneyearfourcut-front \
+            ./client/build s3://oneyearfourcut-front \
             --delete
