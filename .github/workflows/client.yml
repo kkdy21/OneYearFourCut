@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: Install dependencies
         run: npm install
-        working-directory: ./client
+        working-directory: "/client"
       - name: Generate Environment Variables File for Production
         run: echo Generate env
-        working-directory: ./client
+        working-directory: "./client"
         env:
           REACT_APP_SERVER_URL: ${{ secrets.REACT_APP_SERVER_URL }}
           REACT_APP_KAKAO_AUTH_URL: ${{ secrets.REACT_APP_KAKAO_AUTH_URL }}
@@ -19,7 +19,7 @@ jobs:
 
       - name: build
         run: npm run build
-        working-directory: ./client
+        working-directory: "./client"
       - name: Sync Bucket
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
@@ -29,6 +29,6 @@ jobs:
             --region ap-northeast-2 \
             build s3://oneyearfourcut-front \
             --delete
-        working-directory: ./client/build
+        working-directory: "./client/build"
     
 
