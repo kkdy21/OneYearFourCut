@@ -10,14 +10,7 @@ jobs:
       - name: Install depenencies
         run: npm install
         working-directory: ./client
-      - name: Generate Environment Variables File for Production
-        run: echo Setting env
-        working-directory: ./client
-        env:
-          REACT_APP_SERVER_URL: ${{ secrets.REACT_APP_SERVER_URL }}
-          REACT_APP_KAKAO_AUTH_URL: ${{ secrets.REACT_APP_KAKAO_AUTH_URL }}
-          REACT_APP_CRYPTION_SALT: ${{ secrets.REACT_APP_CRYPTION_SALT }}
-         
+      
       - name: build
         run: npm run build
         working-directory: ./client
