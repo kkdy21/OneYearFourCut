@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code.
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
+        with:
+          ref: 'testbranch'
       - name: pwd && ls -al
         run: ls -al
       - name: Install dependencies
