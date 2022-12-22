@@ -17,7 +17,7 @@ const GalleryAllPic = React.lazy(() => import('Gallery/GalleryAllPic'));
 const SingleComment = React.lazy(() => import('./SingleComments/index'));
 const AllComment = React.lazy(() => import('./AllComments/AllComments'));
 
-console.log('merge 후 CD TEST');
+console.log('branch지정 CD');
 
 const router = createBrowserRouter([
   {
