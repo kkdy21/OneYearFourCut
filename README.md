@@ -10,6 +10,7 @@
   - 원본 레포지토리 ( https://github.com/codestates-seb/seb40_main_025 ) 
 
 * 2022.12.19~2023.01.06 (2주) : 리팩토링 및 디벨롭
+  - https://github.com/OneYearFourCut/OneYearFourCut
 
 ### 팀원 소개
 
